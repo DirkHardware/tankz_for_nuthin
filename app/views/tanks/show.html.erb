@@ -1,0 +1,11 @@
+<h1><%= @tank.name %></h1>
+<p>Status: <%= @tank.status %></p>
+<p>Crew:</p>
+<ul>
+    <% @tank.crewmembers.each do |crewmember| %>
+        <li><%= crewmember.rank + " " + crewmember.name %></li>
+    <% end %>
+        <li>Mechanic <%= @tank.mechanic.name %></li>
+
+</ul>
+

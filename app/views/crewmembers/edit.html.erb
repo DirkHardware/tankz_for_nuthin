@@ -1,0 +1,13 @@
+<h1>Crewmembers#edit</h1>
+<p>Find me in app/views/crewmembers/edit.html.erb</p>
+
+<%=form_for @crewmember do |f|%>
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+   <%= f.label :rank %>
+   <%= f.text_field :rank %>
+   byebug
+   <%= f.collection_select(:tank_id, @tanks, :id, :name, prompt: "Select Vehicle")%>
+   <%= f.submit "submit" %>
+<%end%>
+

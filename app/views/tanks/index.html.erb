@@ -1,0 +1,12 @@
+<h1>Tanks#index</h1>
+<ul>
+    <% @tanks.each do |tank| %>
+    <li><%= tank.name %></li>
+        <% tank.crewmembers.each do |crewmember| %>
+            <ul><%= crewmember.name %></ul>
+        <% end %>
+    <ul>Mechanic: <%= tank.mechanic.name %></ul>
+    <%= button_to "Destroy", {action: "delete", id: tank.id}, method: :delete %>
+    <%= button_to "Blowout", {action: "blowout", id: tank.id}, method: :delete %>    
+    <% end %>
+</ul>

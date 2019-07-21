@@ -6,7 +6,6 @@
    <%= f.text_field :name %>
    <%= f.label :rank %>
    <%= f.text_field :rank %>
-   byebug
    <%= f.collection_select(:tank_id, @tanks, :id, :name, prompt: "Select Vehicle")%>
    <%= f.submit "submit" %>
 <%end%>

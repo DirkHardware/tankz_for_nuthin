@@ -6,12 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-bittie = Tank.create!(name: "Bittie Mae", status: "Nominal")
 
 # # 
-# Crewmembers.destroy_all
-# Mechanic.destroy_all
-# Tank.destroy_all
+Crewmember.destroy_all
+Mechanic.destroy_all
+Tank.destroy_all
+
+unassigned = Tank.create!(name: "unassigned", status: "Nominal")
+
+ghost1 = Crewmember.create!(name: "unassigned", rank: " ", tank: unassigned)
+ghost2 = Crewmember.create!(name: "unassigned", rank: " ", tank: unassigned)
+ghost3 = Crewmember.create!(name: "unassigned", rank: " ", tank: unassigned)
+ghost4 = Crewmember.create!(name: "unassigned", rank: " ", tank: unassigned)
+
+keyvan = Crewmember.create!(name: "Keyvan Novack", rank: "Sergeant", tank: unassigned)
+rich = Crewmember.create!(name: "Rich Evans", rank: "Sergeant", tank: unassigned)
+
+bittie = Tank.create!(name: "Bittie Mae", status: "Nominal")
+
 
 brad = Crewmember.create!(name: "Brad Pitt", rank: "Sergeant", tank: bittie)
 adam = Crewmember.create!(name: "Adam Malarky", rank: "Corporal", tank: bittie)

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get "/tanks/", to: "tanks#index"
   get "/tanks/:id/", to: "tanks#show", as: "tank"
+  get "/crewmembers/", to: "crewmembers#index"
   get "/crewmembers/:id", to: "crewmembers#show", as: "crewmember"
   get "/crewmembers/:id/edit", to: "crewmembers#edit"
   get "/mechanics/:id", to: "mechanics#show", as: "mechanic"

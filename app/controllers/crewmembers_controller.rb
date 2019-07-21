@@ -1,5 +1,7 @@
 class CrewmembersController < ApplicationController
   def index
+    @unassigned_crew = Crewmember.all.select { |c| c.tank.name == "unassigned"}
+    @assigned_crew = Crewmember.all.select { |c| c.tank.name != "unassigned"}
   end
 
   def show

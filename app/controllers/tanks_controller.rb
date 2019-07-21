@@ -1,6 +1,6 @@
 class TanksController < ApplicationController
   def index
-    @tanks = Tank.all
+    @tanks = Tank.all.select {|tank| tank.name != "unassigned"}
   end
 
   def show
